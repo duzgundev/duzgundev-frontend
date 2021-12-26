@@ -1,18 +1,20 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import useSWR from 'swr';
+import ErrorMessage from '../../components/ErrorMessage';
+import Loading from '../../components/Loading';
 import { BlogPost } from '../api/blog/[id]';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-export const Blog: NextPage = () => {
+const Blog: NextPage = () => {
   const { data, error } = useSWR<BlogPost[]>('api/blog ', fetcher);
 
-  if (error) return <div>Failed to load user</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <ErrorMessage errorMessage={error.message} />;
+  if (!data) return <Loading />;
 
   return (
-    <div className="space-y-6">
+    <div className="site-container space-y-6">
       {data.map((post) => {
         const publishDate = new Date(post.createdAt).toDateString();
 

@@ -12,13 +12,13 @@ export interface BlogPost {
   updatedAt?: number;
 }
 
-type Error = {
+export interface ErrorResponse {
   message: string;
-};
+}
 
 export default function handler(
   { query: { id } }: NextApiRequest,
-  res: NextApiResponse<BlogPost | Error>
+  res: NextApiResponse<BlogPost | ErrorResponse>
 ) {
   const filtered = blog.filter((post: BlogPost) => post.ID === id);
 

@@ -1,8 +1,12 @@
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import useSWR from 'swr';
 import { BlogPost } from '../api/blog/[id]';
+import coverImg from '../../contentrain/static/1640415651309_cover.jpg';
+import ErrorMessage from '../../components/ErrorMessage';
+import Loading from '../../components/Loading';
 
 const fetcher = async (url: string) => {
   const res = await fetch(url);
@@ -28,22 +32,30 @@ const PostDetail: NextPage = () => {
     }
   }, [data]);
 
-  if (error) return <div>{error.message}</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <ErrorMessage errorMessage={error.message} />;
+  if (!data) return <Loading />;
 
   return (
     <article>
-      <h1 className="text-4xl font-bold">{data.title}</h1>
-      <hr className="text-gray-200 my-6" />
-      <div
-        className="prose"
-        dangerouslySetInnerHTML={{ __html: data.content }}
-      />
-      {updateDate && (
-        <div className="text-gray-400 text-right my-6">
-          <span>Last Updated: {updateDate}</span>
+      {data.cover && (
+        <div className="site-4xl-container mb-6">
+          {/* TODO: coverImg should be data.cover but it doesn't work for now */}
+          <Image src={coverImg} alt={data.title} />
         </div>
       )}
+      <div className="site-container">
+        <h1 className="text-4xl font-bold">{data.title}</h1>
+        <hr className="text-gray-200 my-6" />
+        <div
+          className="prose"
+          dangerouslySetInnerHTML={{ __html: data.content }}
+        />
+        {updateDate && (
+          <div className="text-gray-400 text-right my-6">
+            <span>Last Updated: {updateDate}</span>
+          </div>
+        )}
+      </div>
     </article>
   );
 };

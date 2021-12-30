@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import useSWR from 'swr';
 import { BlogPost } from '../api/blog/[id]';
-import coverImg from '../../contentrain/static/1640415651309_cover.jpg';
 import ErrorMessage from '../../components/ErrorMessage';
 import Loading from '../../components/Loading';
 
@@ -39,8 +38,10 @@ const PostDetail: NextPage = () => {
     <article>
       {data.cover && (
         <div className="site-4xl-container mb-6">
-          {/* TODO: coverImg should be data.cover but it doesn't work for now */}
-          <Image src={coverImg} alt={data.title} />
+          <Image
+            src={require('../../contentrain/static/' + data.cover)}
+            alt={data.title}
+          />
         </div>
       )}
       <div className="site-container">

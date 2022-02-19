@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="antialiased text-gray-700">
+    <div className="text-gray-700 antialiased">
       <main className="mt-6 mb-20">
         <Header />
         <Component {...pageProps} />

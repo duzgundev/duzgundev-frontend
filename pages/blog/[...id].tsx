@@ -37,7 +37,7 @@ const PostDetail: NextPage = () => {
   return (
     <article>
       {data.cover && (
-        <div className="site-4xl-container mb-6">
+        <div className="site-container mb-6">
           <Image
             src={require('../../public/contentrain/' + data.cover)}
             alt={data.title}
@@ -46,13 +46,13 @@ const PostDetail: NextPage = () => {
       )}
       <div className="site-container">
         <h1 className="text-4xl font-bold">{data.title}</h1>
-        <hr className="text-gray-200 my-6" />
+        <hr className="my-6 text-gray-200" />
         <div
           className="prose"
           dangerouslySetInnerHTML={{ __html: data.content }}
         />
         {updateDate && (
-          <div className="text-gray-400 text-right my-6">
+          <div className="my-6 text-right text-gray-400">
             <span>Last Updated: {updateDate}</span>
           </div>
         )}

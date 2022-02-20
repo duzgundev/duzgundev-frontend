@@ -15,23 +15,25 @@ const Blog: NextPage = () => {
 
   return (
     <div className="site-container space-y-6">
-      {data.map((post) => {
-        const publishDate = new Date(post.createdAt).toDateString();
+      <div className="site-section">
+        {data.map((post) => {
+          const publishDate = new Date(post.createdAt).toDateString();
 
-        return (
-          <article className="space-y-2" key={post.ID}>
-            <h2 className="text-xl font-bold">
-              <Link href={`blog/${post.ID}`}>
-                <a>{post.title}</a>
-              </Link>
-            </h2>
-            <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-            <div className="text-gray-400">
-              <span>{publishDate}</span>
-            </div>
-          </article>
-        );
-      })}
+          return (
+            <article className="space-y-2" key={post.ID}>
+              <h2 className="text-xl font-bold">
+                <Link href={`blog/${post.ID}`}>
+                  <a>{post.title}</a>
+                </Link>
+              </h2>
+              <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+              <div className="text-gray-400">
+                <span>{publishDate}</span>
+              </div>
+            </article>
+          );
+        })}
+      </div>
     </div>
   );
 };

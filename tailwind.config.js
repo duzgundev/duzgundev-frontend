@@ -4,7 +4,16 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    screens: {
+      sm: '576px',
+      md: '960px',
+      lg: '1440px',
+    },
+    extend: {
+      spacing: {
+        18: '4.5rem',
+      },
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 };

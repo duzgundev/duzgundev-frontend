@@ -4,9 +4,10 @@
 
 @layer components {
   .site-container {
-    @apply max-w-2xl mx-auto px-6;
+    @apply mx-auto grid max-w-screen-lg grid-cols-12 gap-4 px-18;
   }
-  .site-4xl-container {
-    @apply max-w-4xl mx-auto;
+
+  .site-section {
+    @apply col-start-2 col-end-12;
   }
 }

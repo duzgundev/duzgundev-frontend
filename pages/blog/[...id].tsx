@@ -35,16 +35,16 @@ const PostDetail: NextPage = () => {
   if (!data) return <Loading />;
 
   return (
-    <article>
+    <article className="site-container">
       {data.cover && (
-        <div className="site-container mb-6">
+        <div className="col-start-3 col-end-11 mb-6">
           <Image
             src={require('../../public/contentrain/' + data.cover)}
             alt={data.title}
           />
         </div>
       )}
-      <div className="site-container">
+      <div className="site-section">
         <h1 className="text-4xl font-bold">{data.title}</h1>
         <hr className="my-6 text-gray-200" />
         <div

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: Bitter, system-ui, sans-serif;
+  }
+}
+
 @layer components {
   .site-container {
     @apply mx-auto grid max-w-screen-lg grid-cols-12 gap-4 px-4 sm:px-6 md:px-18;

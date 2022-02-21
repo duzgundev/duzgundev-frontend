@@ -13,6 +13,13 @@ module.exports = {
       spacing: {
         18: '4.5rem',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+          },
+        },
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

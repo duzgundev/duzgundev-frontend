@@ -25,10 +25,11 @@ const About = () => {
       </div>
       <div className="col-start-8 col-end-12">
         <Image
-          src="/profile-picture.png"
+          src="/profile-picture.jpg"
           alt="Mert Düzgün"
           width={422}
           height={500}
+          objectFit="cover"
         />
       </div>
     </section>

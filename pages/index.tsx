@@ -1,10 +1,13 @@
 import type { NextPage } from 'next';
+import About from '../modules/About';
+import MyStack from '../modules/MyStack';
 
 const Home: NextPage = () => {
   return (
-    <div className="site-container">
-      <section className="site-section">Hi, I&apos;m Mert</section>
-    </div>
+    <>
+      <About />
+      <MyStack />
+    </>
   );
 };
 

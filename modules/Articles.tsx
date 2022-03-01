@@ -15,7 +15,7 @@ const Articles = () => {
 
           return (
             <article className="space-y-2" key={post.ID}>
-              <Link href={`blog/${post.ID}`}>
+              <Link href={`/blog/${post.ID}`}>
                 <a>
                   {post.coverImage && (
                     <Image

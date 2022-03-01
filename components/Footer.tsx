@@ -9,12 +9,12 @@ const Footer = () => {
     <footer>
       <div className="site-container py-6">
         <div className="site-section flex justify-between">
-          <div className="flex gap-4">
+          <div className="flex gap-2 sm:gap-4">
             <CopyrightIcon />
             <p>Mert Düzgün</p>
             <p>2022</p>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-2 sm:gap-4">
             <Link href="https://github.com/duzgundev">
               <a>
                 <GithubIcon />

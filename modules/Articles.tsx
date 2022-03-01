@@ -17,20 +17,20 @@ const Articles = () => {
   return (
     <section className="site-container mt-24">
       <h2 className="col-start-4 col-end-10 text-center text-4xl font-bold">
-        My thougts and experiences about development ecosystem{' '}
+        My thougts and experiences about development ecosystem
       </h2>
       <div className="col-span-full mt-16 grid grid-cols-3 gap-4">
         {data.map((post) => {
           const publishDate = dayjs(post.createdAt).format('DD MMM YYYY');
-          console.log(post.cover);
+          console.log(post.coverImage);
 
           return (
             <article className="space-y-2" key={post.ID}>
               <Link href={`blog/${post.ID}`}>
                 <a>
-                  {post.cover && (
+                  {post.coverImage && (
                     <Image
-                      src={require('../public/contentrain/' + post.cover)}
+                      src={require('../public/contentrain/' + post.coverImage)}
                       alt={post.title}
                       width={421}
                       height={237}
@@ -38,7 +38,7 @@ const Articles = () => {
                     />
                   )}
                   <div className="mt-6 flex items-center gap-4 text-gray-400">
-                    <span>Mert Düzgün</span>
+                    <span>{post.author}</span>
                     <div className="h-2 w-2 rounded-full bg-gray-400"></div>
                     <span>{publishDate}</span>
                   </div>

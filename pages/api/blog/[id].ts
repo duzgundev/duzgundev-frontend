@@ -4,10 +4,11 @@ const blog = require('../../../contentrain/Blog.json');
 export interface BlogPost {
   createdAt: number;
   content: string;
-  cover: string;
+  coverImage: string;
+  author: string;
   title: string;
   ID: string;
-  tags: any[];
+  tags?: string[];
   excerpt: string;
   updatedAt?: number;
 }

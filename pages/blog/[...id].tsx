@@ -36,10 +36,10 @@ const PostDetail: NextPage = () => {
 
   return (
     <article className="site-container">
-      {data.cover && (
+      {data.coverImage && (
         <div className="col-span-full mb-6 md:col-start-3 md:col-end-11">
           <Image
-            src={require('../../public/contentrain/' + data.cover)}
+            src={require('../../public/contentrain/' + data.coverImage)}
             alt={data.title}
           />
         </div>

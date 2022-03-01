@@ -41,6 +41,7 @@ const PostDetail: NextPage = () => {
           <Image
             src={require('../../public/contentrain/' + data.coverImage)}
             alt={data.title}
+            layout="responsive"
           />
         </div>
       )}

@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import About from '../modules/About';
-import Articles from '../modules/Articles';
-import MyStack from '../modules/MyStack';
+import About from '../components/About';
+import Articles from '../components/Articles';
+import MyStack from '../components/MyStack';
 
 const Home: NextPage = () => {
   return (

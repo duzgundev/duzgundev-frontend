@@ -22,7 +22,6 @@ const Articles = () => {
       <div className="col-span-full mt-16 grid grid-cols-3 gap-4">
         {data.map((post) => {
           const publishDate = dayjs(post.createdAt).format('DD MMM YYYY');
-          console.log(post.coverImage);
 
           return (
             <article className="space-y-2" key={post.ID}>

@@ -1,19 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import useSWR from 'swr';
-import ErrorMessage from '../components/ErrorMessage';
-import Loading from '../components/Loading';
-import { BlogPost } from '../pages/api/blog/[id]';
 import dayjs from 'dayjs';
-
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+import data from '../contentrain/Blog.json';
 
 const Articles = () => {
-  const { data, error } = useSWR<BlogPost[]>('api/blog ', fetcher);
-
-  if (error) return <ErrorMessage errorMessage={error.message} />;
-  if (!data) return <Loading />;
-
   return (
     <section className="site-container mt-24">
       <h2 className="col-start-4 col-end-10 text-center text-4xl font-bold">

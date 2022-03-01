@@ -4,6 +4,7 @@ import posts from '../../contentrain/Blog.json';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
+import Head from 'next/head';
 
 interface Post {
   createdAt: number;
@@ -31,35 +32,40 @@ const PostDetail = ({ post }: PostDetailProps) => {
   }, [post]);
 
   return (
-    <article className="site-container">
-      {post.coverImage && (
-        <div className="col-span-full mb-6 md:col-start-3 md:col-end-11">
-          <Image
-            src={require('../../public/contentrain/' + post.coverImage)}
-            alt={post.title}
-            layout="responsive"
-          />
-        </div>
-      )}
-      <div className="site-section">
-        <h1 className="text-4xl font-bold">{post.title}</h1>
-        <hr className="my-6 text-gray-200" />
-        <div className="prose">
-          <ReactMarkdown
-            rehypePlugins={[rehypeRaw]}
-            remarkPlugins={[remarkGfm]}
-            className="markdown-body"
-          >
-            {post.content}
-          </ReactMarkdown>
-        </div>
-        {updateDate && (
-          <div className="my-6 text-right text-gray-400">
-            <span>Last Updated: {updateDate}</span>
+    <>
+      <Head>
+        <title>{post.title} | Mert Düzgün</title>
+      </Head>
+      <article className="site-container">
+        {post.coverImage && (
+          <div className="col-span-full mb-6 md:col-start-3 md:col-end-11">
+            <Image
+              src={require('../../public/contentrain/' + post.coverImage)}
+              alt={post.title}
+              layout="responsive"
+            />
           </div>
         )}
-      </div>
-    </article>
+        <div className="site-section">
+          <h1 className="text-4xl font-bold">{post.title}</h1>
+          <hr className="my-6 text-gray-200" />
+          <div className="prose">
+            <ReactMarkdown
+              rehypePlugins={[rehypeRaw]}
+              remarkPlugins={[remarkGfm]}
+              className="markdown-body"
+            >
+              {post.content}
+            </ReactMarkdown>
+          </div>
+          {updateDate && (
+            <div className="my-6 text-right text-gray-400">
+              <span>Last Updated: {updateDate}</span>
+            </div>
+          )}
+        </div>
+      </article>
+    </>
   );
 };
 

@@ -40,9 +40,7 @@ const Header = () => {
             <ul className="flex space-x-4">
               <li>
                 <Link href="/">
-                  <a
-                    className={clsx({ 'font-semibold': router.asPath == '/' })}
-                  >
+                  <a className={clsx({ 'font-bold': router.asPath == '/' })}>
                     About
                   </a>
                 </Link>
@@ -51,7 +49,7 @@ const Header = () => {
                 <Link href="/blog">
                   <a
                     className={clsx({
-                      'font-semibold': router.asPath == '/blog',
+                      'font-bold': router.asPath == '/blog',
                     })}
                   >
                     Blog
@@ -62,7 +60,7 @@ const Header = () => {
                 <Link href="/#contact">
                   <a
                     className={clsx({
-                      'font-semibold': router.asPath == '/#contact',
+                      'font-bold': router.asPath == '/#contact',
                     })}
                   >
                     Contact

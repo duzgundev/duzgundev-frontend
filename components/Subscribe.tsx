@@ -1,6 +1,6 @@
 const Subscribe = () => {
   return (
-    <section className="my-16 w-full bg-[#F1F5F9]">
+    <section className="my-8 w-full bg-[#F1F5F9] sm:my-16">
       <div className="site-container">
         <div className="site-section flex flex-col items-center justify-between text-center md:flex-row md:items-start md:gap-4 md:text-left">
           <div className="mt-10">

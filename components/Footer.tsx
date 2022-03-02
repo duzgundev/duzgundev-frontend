@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="border border-solid border-t-gray-100">
       <div className="site-container py-6">
         <div className="site-section flex justify-between">
           <div className="flex gap-2 sm:gap-4">

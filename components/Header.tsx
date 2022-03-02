@@ -24,9 +24,12 @@ const Header = () => {
 
   return (
     <header
-      className={clsx('sticky top-0 z-10 bg-white transition duration-700', {
-        'shadow-md': scrolled,
-      })}
+      className={clsx(
+        'sticky top-0 z-10 bg-[#F8FAFC] transition duration-700',
+        {
+          'shadow-md': scrolled,
+        }
+      )}
     >
       <div className="site-container">
         <div className="site-section flex justify-center py-5 sm:justify-between">

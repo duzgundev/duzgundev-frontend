@@ -2,6 +2,7 @@ import TwitterIcon from '../public/twitter.svg';
 import LinkedInIcon from '../public/linkedin.svg';
 import GithubIcon from '../public/github.svg';
 import CopyrightIcon from '../public/copyright.svg';
+import InstagramIcon from '../public/instagram.svg';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -28,6 +29,11 @@ const Footer = () => {
             <Link href="https://linkedin.com/in/mertduzgun">
               <a>
                 <LinkedInIcon />
+              </a>
+            </Link>
+            <Link href="https://instagram.com/duzgundev">
+              <a>
+                <InstagramIcon />
               </a>
             </Link>
           </div>

@@ -21,7 +21,7 @@ const About = () => {
             Hubtic
           </a>
           . I define myself as a curious and passionate learner. I think
-          everything gets better when it&apos;s shared and that&apos;s what
+          everything gets better when they&apos;re shared and that&apos;s what
           I&apos;m doing here.
         </p>
         <Link href="/blog">

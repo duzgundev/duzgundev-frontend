@@ -10,11 +10,19 @@ const About = () => {
           Hi! I&apos;m Mert
         </h1>
         <p className="mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla
-          vitae blandit arcu mattis malesuada faucibus mi platea euismod. Et
-          lorem enim blandit in dui cum est dictumst. Et ut magna eget montes,
-          et et convallis. Fringilla facilisis vitae vitae massa. Fermentum
-          vulputate sagittis senectus eget aliquam.
+          I&apos;m a frontend developer based in Istanbul, Turkey. Currently
+          working as a Lead Frontend Developer at{' '}
+          <a
+            href="https://www.hubtic.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="underline"
+          >
+            Hubtic
+          </a>
+          . I define myself as a curious and passionate learner. I think
+          everything gets better when it&apos;s shared and that&apos;s what
+          I&apos;m doing here.
         </p>
         <Link href="/blog">
           <a>

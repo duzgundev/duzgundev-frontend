@@ -17,22 +17,22 @@ const Footer = () => {
           </div>
           <div className="flex gap-2 sm:gap-4">
             <Link href="https://github.com/duzgundev">
-              <a>
+              <a target="_blank">
                 <GithubIcon />
               </a>
             </Link>
             <Link href="https://twitter.com/duzgundev">
-              <a>
+              <a target="_blank">
                 <TwitterIcon />
               </a>
             </Link>
             <Link href="https://linkedin.com/in/mertduzgun">
-              <a>
+              <a target="_blank">
                 <LinkedInIcon />
               </a>
             </Link>
             <Link href="https://instagram.com/duzgundev">
-              <a>
+              <a target="_blank">
                 <InstagramIcon />
               </a>
             </Link>

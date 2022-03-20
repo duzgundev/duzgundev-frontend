@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Subscribe from '../components/Subscribe';
+import FeedBackForm from '../components/FeedBackForm';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main className="mb-8 sm:mb-20 md:mb-16">
         <Component {...pageProps} />
         <Subscribe />
+        <FeedBackForm />
       </main>
       <Footer />
     </div>

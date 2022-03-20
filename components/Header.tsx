@@ -57,10 +57,10 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/#contact">
+                <Link href="#contact">
                   <a
                     className={clsx({
-                      'font-bold': router.asPath == '/#contact',
+                      'font-bold': router.asPath.match(/#([a-z0-9]+)/gi),
                     })}
                   >
                     Contact

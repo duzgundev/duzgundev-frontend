@@ -17,6 +17,7 @@ const FeedBackForm = () => {
         action="/success"
         className="col-span-full mt-6 border bg-white p-8 sm:col-start-3 sm:col-end-11 md:col-start-8 md:col-end-12 md:mt-0"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <div className="flex flex-col">
           <label htmlFor="name">Name</label>
           <input

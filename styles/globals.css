@@ -5,6 +5,7 @@
 @layer base {
   html {
     font-family: Bitter, system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
 }
 

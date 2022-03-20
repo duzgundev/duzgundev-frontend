@@ -9,6 +9,7 @@ const FeedBackForm = () => {
         </p>
       </div>
       <form
+        name="contact"
         data-netlify="true"
         className="col-span-full mt-6 border bg-white p-8 sm:col-start-3 sm:col-end-11 md:col-start-8 md:col-end-12 md:mt-0"
       >
@@ -41,7 +42,10 @@ const FeedBackForm = () => {
             required
           />
         </div>
-        <button className="mt-8 w-full bg-[#1E293B] py-3 px-6 text-white">
+        <button
+          type="submit"
+          className="mt-8 w-full bg-[#1E293B] py-3 px-6 text-white"
+        >
           Send
         </button>
       </form>

@@ -85,4 +85,5 @@ export async function getStaticProps({ params }: any) {
 
   return { props: { post } };
 }
+
 export default PostDetail;

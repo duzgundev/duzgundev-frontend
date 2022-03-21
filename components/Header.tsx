@@ -33,7 +33,7 @@ const Header = () => {
       )}
     >
       <div className="site-container">
-        <div className="site-section flex justify-between py-5">
+        <div className="site-section flex justify-between py-3 sm:py-5">
           <Link href="/">
             <a className="flex items-center text-2xl font-bold">
               <MdLogo />

@@ -41,6 +41,7 @@ const About = () => {
           height={500}
           objectFit="cover"
           layout="responsive"
+          placeholder="blur"
         />
       </div>
     </section>

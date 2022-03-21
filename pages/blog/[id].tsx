@@ -43,6 +43,7 @@ const PostDetail = ({ post }: PostDetailProps) => {
               src={require('../../public/contentrain/' + post.coverImage)}
               alt={post.title}
               layout="responsive"
+              placeholder="blur"
             />
           </div>
         )}

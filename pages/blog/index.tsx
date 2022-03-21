@@ -28,6 +28,7 @@ const Blog: NextPage = () => {
                       height={237}
                       objectFit="cover"
                       layout="intrinsic"
+                      placeholder="blur"
                     />
                     <div className="flex basis-3/5 flex-col">
                       <h2 className="text-3xl font-bold">{post.title}</h2>

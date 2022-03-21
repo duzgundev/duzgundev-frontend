@@ -25,6 +25,7 @@ const Articles = () => {
                       height={237}
                       objectFit="cover"
                       layout="responsive"
+                      placeholder="blur"
                     />
                   )}
                   <div className="mt-3 flex items-center gap-4 text-gray-400 sm:mt-6">

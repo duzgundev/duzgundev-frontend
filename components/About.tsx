@@ -5,7 +5,7 @@ import ArrowIcon from '../public/arrow.svg';
 const About = () => {
   return (
     <section className="site-container my-10 sm:my-16">
-      <div className="col-span-full flex flex-col items-center  sm:col-start-2 sm:col-end-7 sm:items-start ">
+      <div className="col-span-full flex flex-col items-center  sm:col-[2/7] sm:items-start ">
         <h1 className="text-center text-4xl font-bold sm:text-left">
           Hi! I&apos;m Mert
         </h1>
@@ -33,7 +33,7 @@ const About = () => {
           </a>
         </Link>
       </div>
-      <div className="col-span-full sm:col-start-8 sm:col-end-12">
+      <div className="col-span-full sm:col-[8/12]">
         <Image
           src="/profile-picture.jpg"
           alt="Mert Düzgün"

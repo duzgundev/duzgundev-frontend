@@ -3,7 +3,7 @@ import { format } from 'path';
 const FeedBackForm = () => {
   return (
     <section className="site-container md:mt-24" id="contact">
-      <div className="col-span-full text-center md:col-start-2 md:col-end-7 md:text-left">
+      <div className="col-span-full text-center md:col-[2/7] md:text-left">
         <h2 className="text-4xl font-bold">Let&apos;s Talk</h2>
         <p className="mt-6">
           Don&apos;t be shy, I&apos;m always open to new ideas and
@@ -15,7 +15,7 @@ const FeedBackForm = () => {
         data-netlify="true"
         method="POST"
         action="/success"
-        className="col-span-full mt-6 border bg-white p-8 sm:col-start-3 sm:col-end-11 md:col-start-8 md:col-end-12 md:mt-0"
+        className="col-span-full mt-6 border bg-white p-8 sm:col-[3/11] md:col-[8/12] md:mt-0"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div className="flex flex-col">

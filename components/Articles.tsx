@@ -6,7 +6,7 @@ import data from '../contentrain/Blog.json';
 const Articles = () => {
   return (
     <section className="site-container mt-12 sm:mt-24">
-      <h2 className="col-span-full text-center text-2xl font-bold sm:text-4xl lg:col-start-4 lg:col-end-10">
+      <h2 className="col-span-full text-center text-2xl font-bold sm:text-4xl lg:col-[4/10]">
         My thougts and experiences about development ecosystem
       </h2>
       <div className="col-span-full mt-8 grid grid-cols-1 gap-10 sm:mt-16 sm:grid-cols-2 sm:gap-4 sm:gap-y-16 md:grid-cols-3">

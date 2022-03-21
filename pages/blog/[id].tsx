@@ -38,7 +38,7 @@ const PostDetail = ({ post }: PostDetailProps) => {
       </Head>
       <article className="site-container">
         {post.coverImage && (
-          <div className="col-span-full mb-6 md:col-start-3 md:col-end-11">
+          <div className="col-span-full mb-6 md:col-[3/11]">
             <Image
               src={require('../../public/contentrain/' + post.coverImage)}
               alt={post.title}

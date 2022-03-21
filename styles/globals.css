@@ -14,7 +14,7 @@
   }
 
   .site-section {
-    @apply col-span-full sm:col-start-2 sm:col-end-12;
+    @apply col-span-full sm:col-[2/12];
   }
 }
 

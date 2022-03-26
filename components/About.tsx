@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowIcon from '../public/arrow.svg';
+import profilePicture from '../public/profile-picture.jpeg';
 
 const About = () => {
   return (
@@ -35,7 +36,7 @@ const About = () => {
       </div>
       <div className="col-span-full sm:col-[8/12]">
         <Image
-          src="/profile-picture.jpg"
+          src={profilePicture}
           alt="Mert Düzgün"
           width={422}
           height={500}
